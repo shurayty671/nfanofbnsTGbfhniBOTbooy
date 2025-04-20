@@ -188,7 +188,7 @@
 
                 try {
                     // Используем прокси для обхода CORS
-                    const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(`https://store.steampowered.com/api/storesearch/?term=${query}&cc=ru&l=russian`)}`);
+                    const response = await fetch(`https://cors-anywhere.herokuapp.com/get?url=${encodeURIComponent(`https://store.steampowered.com/api/storesearch/?term=${query}&cc=ru&l=russian`)}`);
                     const data = await response.json();
 
                     if (data.contents) {
